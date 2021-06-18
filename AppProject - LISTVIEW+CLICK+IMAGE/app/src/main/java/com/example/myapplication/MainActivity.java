@@ -15,11 +15,11 @@ public class MainActivity extends AppCompatActivity {
     public ListView listay;
     public ArrayList comidax;
     public adapter adapter;
-    // CRIAÇÃO DOS OBJETOS
+    // CREATION OF OBJECTS
 
     public static String nomex;
     public static int img;
-    // CRAIÇAÕ DE VARIAVEIS STATICAS
+    // CREATION OF STATIC VARIABLES
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         setTitle("LOJA DE OBJETOS COMPRAVEIS");
-        // MUDA O TITULO
+        // CHANGE THE TITLE
 
         comidax = new ArrayList<>();
-                // INSTANCIAMENTO DO ARRAY LIST
+                // INSTANCING THE ARRAY LIST
 
 
         listay = (ListView) findViewById( R.id.lista);
-            //INSTANCIAMENTO DO LIST VIEW
+            // INSTANCE THE LIST VIEW
 
         comidax.add(new modelo("Carnes",R.drawable.carnes, "19,99"));
         comidax.add(new modelo("Foto comendo salada",R.drawable.salada, "449,99"));
@@ -47,31 +47,31 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //PREENCHIMENTO DO ARRAY LIST COM ESTRUTURA DO MODELO
+        //FILLING THE ARRAY LIST WITH THE MODEL STRUCTURE
 
 
         adapter = new adapter(getBaseContext(), R.layout.linha,comidax);
         listay.setAdapter(adapter);
-        // LIGAÇÃO ENTRE O MODELO E PREENCHIMENTO DE LINHA COM OS VALORES DE COMIDAX
+        // LINK BETWEEN "MODEL" AND FILL IN "LINE" WITH "COMIDAX" VALUES
 
 
-        //CONFIGURA O CLICK DOS ELEMENTOS DO LISTVIEW
+        //CONFIGURE LISTVIEW ELEMENTS CLICK
         listay.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 modelo item = adapter.getItem(i);
-                // PEGA O VALOR DO ENDEREÇO DO ITEM CLICADO.
+                // TAKES THE VALUE OF THE ADDRESS OF THE CLICKED ITEM.
 
 
-                //CONFIGURA A TRANSIÇÃO DE ACTIVITY
+                //SET ACTIVITY TRANSITION
                 Intent trocar = new Intent(MainActivity.this,MainActivity2.class);
                 MainActivity.this.startActivity(trocar);
-                //CONFIGURA A TRANSIÇÃO DE ACTIVITY
+                //SET ACTIVITY TRANSITION
 
 
             }
         });
-        //CONFIGURA O CLICK DOS ELEMENTOS DO LISTVIEW
+        //CONFIGURE LISTVIEW ELEMENTS CLICK
     }
 }

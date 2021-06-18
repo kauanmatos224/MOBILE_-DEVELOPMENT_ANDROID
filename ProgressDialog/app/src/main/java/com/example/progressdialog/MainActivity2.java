@@ -1,5 +1,4 @@
-package com.example.myapplication;
-
+package com.example.progressdialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -10,7 +9,7 @@ import android.preference.DialogPreference;
 import android.view.View;
 import android.widget.Toast;
 
-//CLASSES IMPORTADAS
+//IMPORTED CLASSES
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 

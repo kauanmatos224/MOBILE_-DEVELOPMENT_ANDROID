@@ -18,6 +18,13 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_main2 );
 
+	//instance
+        lblnome=(TextView)findViewById ( R.id.lblnome );
+        figimg=(ImageView)findViewById ( R.id.figimg );
+
+        lblnome.setText ( MainActivity.nomex);
+        figimg.setImageResource ( MainActivity.img );
+
 
 
 
